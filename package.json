@@ -1,0 +1,40 @@
+{
+  "name": "toggl2gitlab",
+  "version": "0.1.0",
+  "description": "Simple app for migrating toggle time entries to gitlab as time spents",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trawiasty/toggl2gitlab.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Paweł Tatarczuk <paweltatarczuk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trawiasty/toggl2gitlab/issues"
+  },
+  "homepage": "https://github.com/trawiasty/toggl2gitlab#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.9.0"
+  },
+  "dependencies": {
+    "async": "^2.4.0",
+    "commander": "^3.0.2",
+    "dotenv": "^8.2.0",
+    "gitlab": "^11.3.0",
+    "toggl-api": "^1.0.1"
+  },
+  "scripts": {
+    "static": "npm run eslint",
+    "test": "npm run mocha",
+    "eslint": "eslint index.js lib test",
+    "mocha": "mocha test"
+  }
+}
