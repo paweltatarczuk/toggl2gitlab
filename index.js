@@ -2,6 +2,8 @@
 
 require('dotenv').config()
 
+const console = require('console');
+const process = require('process');
 const program = require('commander');
 const Toggl = require('./lib/toggl');
 const Gitlab = require('./lib/gitlab');
@@ -9,8 +11,7 @@ const Gitlab = require('./lib/gitlab');
 program
   .option('-g, --group', 'group similar entries together', true)
   .option('-w, --wid <wid>', 'limit entries to specific Toggl workspace')
-  // .option('-d, --date <date>', 'limit entries to specific date' )
-  .arguments('<date>')
+  .arguments('<yyyy-mm-dd>')
   .action(async function (date) {
     // Prepare start and end date
     let startDate = new Date(Date.parse(date));

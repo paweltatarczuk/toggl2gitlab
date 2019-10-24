@@ -2,6 +2,7 @@
 
 const assert = require('assert');
 const sinon = require('sinon');
+const { describe, before, after, it } = require('mocha');
 
 let gitlab = new (require('../lib/gitlab'))('http://example.com', 'secret');
 
