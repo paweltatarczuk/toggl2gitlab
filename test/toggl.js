@@ -2,6 +2,7 @@
 
 const assert = require('assert');
 const sinon = require('sinon');
+const { describe, it } = require('mocha');
 
 let toggl = new (require('../lib/toggl'))('secret');
 
